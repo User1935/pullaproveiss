@@ -6,9 +6,9 @@ on:
 jobs:
   Some_Job:
       if: github.event.review.state == 'approved'
+
       name: 'HelloWorld'
       runs-on: ubuntu-latest
-
       steps:
 
         - uses: actions/checkout@v3

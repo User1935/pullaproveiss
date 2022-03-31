@@ -1,7 +1,8 @@
 name: 'SomeName'
 on:  
-  pull_request_review:
-    types: [submitted]
+  pull_request:
+    types:
+      - closed
   
 jobs:
   Some_Job:

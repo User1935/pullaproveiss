@@ -1,4 +1,4 @@
-name: 'Apply planned settings'
+name: 'Dertstuff'
 on:  
   pull_request_review:
     types: [submitted]
@@ -14,13 +14,14 @@ env:
 jobs:
   generate-matrix:
       if: github.event.review.state == 'approved'
-      name: 'PORISAK'
+      name: 'Generate matrix for build'
       runs-on: ubuntu-latest
 
       steps:
 
         - uses: actions/checkout@v3
-        - name: Debugsss
+
+        - name: Debug
+          id: set-output
           run: |
             echo Hello-WORLD!!
-#

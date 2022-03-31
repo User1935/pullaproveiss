@@ -17,4 +17,4 @@ jobs:
         - name: Debug
           id: set-output
           run: |
-            echo Hello-WORLD!!
+            echo Hello-WORLD!!!

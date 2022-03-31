@@ -1,26 +1,19 @@
-name: 'Apply planned settings'
+name: 'SomeName'
 on:  
   pull_request_review:
     types: [submitted]
-
-
-env:
-  tf_version: 'latest'
-  tg_version: 'latest'
-  tf_working_dir: './CVT-IaC-Live-AZURE/ci-prod/ci-prod-vnet/'
-  STORAGE_KEY: ${{secrets.STORAGE_KEY}}
-  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   
 jobs:
-  generate-matrix:
+  Some_Job:
       if: github.event.review.state == 'approved'
-      name: 'PORISAK'
+      name: 'HelloWorld'
       runs-on: ubuntu-latest
 
       steps:
 
         - uses: actions/checkout@v3
-        - name: Debugsss
+
+        - name: Debug
+          id: set-output
           run: |
             echo Hello-WORLD!!
-#
